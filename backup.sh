@@ -7,10 +7,10 @@ RSYNC=/bin/rsync
 EXIT=0
 
 if [[ -n ${KNOCK1} ]] ; then
-    curl -s --connect-timeout 2 http://${TARGET_HOST}:${KNOCK1}
+    curl -s --connect-timeout 2 http://${HOST}:${KNOCK1}
 fi
 if [[ -n ${KNOCK1} ]] ; then
-    curl -s --connect-timeout 2 http://${TARGET_HOST}:${KNOCK2}
+    curl -s --connect-timeout 2 http://${HOST}:${KNOCK2}
 fi
 
 for DIR in ${LOCATIONS} ; do
