@@ -23,6 +23,7 @@ RUN apk update \
  && apk add \
       bash \
       rsync \
+      sshpass \
  && rm -rf /var/cache/apk/*
 
 ADD backup.sh /usr/local/sbin/backup
