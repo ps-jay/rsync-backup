@@ -22,6 +22,7 @@ RUN apk update \
  && apk upgrade \
  && apk add \
       bash \
+      curl \
       rsync \
       sshpass \
  && rm -rf /var/cache/apk/*
