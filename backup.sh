@@ -4,6 +4,7 @@ set -u
 
 CURL=/usr/bin/curl
 RSYNC=/usr/bin/rsync
+SSH=/usr/bin/ssh
 SSHPASS=/usr/bin/sshpass
 
 EXIT=0
@@ -18,7 +19,7 @@ fi
 for DIR in ${LOCATIONS} ; do
     echo -e "INFO: New backup starting `date`"
     ${RSYNC} -HPax --delete --stats \
-          -e "${SSHPASS} -p ${PASSWORD} ssh -p ${PORT} -l ${USERNAME}" \
+          -e "${SSHPASS} -p ${PASSWORD} ${SSH} -p ${PORT} -l ${USERNAME}" \
           ${DIR} \
           ${HOST}::${TARGET}${DIR}
 
