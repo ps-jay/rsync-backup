@@ -10,10 +10,10 @@ SSHPASS=/usr/bin/sshpass
 EXIT=0
 
 if [[ -n ${KNOCK1} ]] ; then
-    ${CURL} -s --connect-timeout 2 http://${HOST}:${KNOCK1}
+    ${CURL} -s --connect-timeout 1 http://${HOST}:${KNOCK1}
 fi
 if [[ -n ${KNOCK1} ]] ; then
-    ${CURL} -s --connect-timeout 2 http://${HOST}:${KNOCK2}
+    ${CURL} -s --connect-timeout 1 http://${HOST}:${KNOCK2}
 fi
 
 for DIR in ${LOCATIONS} ; do
